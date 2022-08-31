@@ -1,9 +1,18 @@
 <template>
   <div>
     <h1>Company Page</h1>
-    <pre>
-      {{ services }}
-    </pre>
+    <div v-if="$fetchState.pending">
+      Carregando...
+    </div>
+    <div v-else>
+      <div
+        v-for="service in services"
+        :key="service.id"
+        class="border-b border-gray-400 py-4"
+      >
+        {{ service.username }}
+      </div>
+    </div>
   </div>
 </template>
 
