@@ -2,7 +2,7 @@
   <div>
     <h1>Company Page</h1>
     <pre>
-      {{ companies }}
+      {{ services }}
     </pre>
   </div>
 </template>
@@ -11,12 +11,14 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'CompanyPage',
-  async asyncData ({ $axios }) {
-    const companies = await $axios.$get('https://jsonplaceholder.typicode.com/posts')
+  name: 'AboutPage',
+  data () {
     return {
-      companies
+      services: []
     }
+  },
+  async fetch () {
+    this.services = await this.$axios.$get('https://jsonplaceholder.typicode.com/users')
   }
 })
 </script>
