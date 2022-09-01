@@ -17,6 +17,17 @@ export default Vue.extend({
     return {
       companies
     }
+  },
+  head (): Object {
+    return {
+      title: 'Serviços',
+      meta: [
+        { hid: 'description', name: 'description', content: 'company' }
+      ],
+      bodyAttrs: {
+        class: 'bg-gray-400'
+      }
+    }
   }
 })
 </script>
