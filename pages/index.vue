@@ -17,6 +17,7 @@ export default Vue.extend({
   },
   mounted () {
     this.$myInjectedFunction('funcionando em mounted')
+    this.$dayjs()
   }
 })
 </script>
