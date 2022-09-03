@@ -14,6 +14,9 @@ export default Vue.extend({
     user () {
       return this.$store.state
     }
+  },
+  mounted () {
+    this.$myInjectedFunction('funcionando em mounted')
   }
 })
 </script>
