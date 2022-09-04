@@ -1,6 +1,14 @@
 <template>
   <div>
-    {{ user }}
+    <pre>
+      user
+      {{ user }}
+    </pre>
+
+    <pre>
+      config
+      {{ $config }}
+    </pre>
     <Tutorial />
   </div>
 </template>
@@ -10,6 +18,9 @@ import Vue from 'vue'
 
 export default Vue.extend({
   name: 'IndexPage',
+  asyncData ({ $config }) {
+    console.log($config)
+  },
   computed: {
     user () {
       return this.$store.state
