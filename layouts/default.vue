@@ -1,20 +1,28 @@
 <template>
   <div>
-    asdasdasd
-    <Nuxt />
+    <DefaultHeader />
+    <div class="max-w-7xl mx-auto p-4">
+      <div class="mt-4">
+        <Nuxt />
+      </div>
+    </div>
   </div>
 </template>
 
-<script lang="ts">
+<script lang='ts'>
 import Vue from 'vue'
 
-export default Vue.extend({
-  name: '',
+import DefaultHeader from '@/components/ui/DefaultHeader.vue'
 
-  data() {
+export default Vue.extend({
+  name: 'DefaultLayout',
+  components: {
+    DefaultHeader
+  },
+  data () {
     return {}
   },
 
-  methods: {},
+  methods: {}
 })
 </script>
