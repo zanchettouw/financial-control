@@ -3,12 +3,14 @@ export default {
   head: {
     title: 'nuxt',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'pt-br'
+    },
+    bodyAttrs: {
+      class: 'bg-gray-50'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -30,8 +32,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '@/plugins/plugin-example',
-    '@/plugins/dayjs'
+    '@/plugins/dayjs',
+    '@/plugins/axios'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
