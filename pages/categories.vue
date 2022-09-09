@@ -3,6 +3,7 @@
     <div class="flex items-center justify-between">
       <h1 class="font-bold text-2xl">
         Categorias
+        {{ categories }}
       </h1>
     </div>
 
@@ -96,10 +97,16 @@ export default Vue.extend({
     AppButton,
     FormInput
   },
+  async asyncData ({ store }) {
+    return {
+      categories: await store.dispatch('categories/getCategories')
+    }
+  },
   data () {
     return {}
   },
 
   methods: {}
+
 })
 </script>
